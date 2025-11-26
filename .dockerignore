@@ -1,2 +1,8 @@
-*
-!target/quarkus-app/**
+target
+.mvn
+.github
+.git
+.gitignore
+mvnw
+mvnw.cmd
+README.md
