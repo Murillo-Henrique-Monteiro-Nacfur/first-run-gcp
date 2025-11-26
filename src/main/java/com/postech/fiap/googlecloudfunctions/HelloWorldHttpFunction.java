@@ -1,19 +1,13 @@
 package com.postech.fiap.googlecloudfunctions;
 
-import java.io.Writer;
-
+import io.quarkus.funqy.Funq;
 import jakarta.enterprise.context.ApplicationScoped;
 
-import com.google.cloud.functions.HttpFunction;
-import com.google.cloud.functions.HttpRequest;
-import com.google.cloud.functions.HttpResponse;
-
 @ApplicationScoped
-public class HelloWorldHttpFunction implements HttpFunction {
+public class HelloWorldHttpFunction {
 
-    @Override
-    public void service(HttpRequest httpRequest, HttpResponse httpResponse) throws Exception {
-        Writer writer = httpResponse.getWriter();
-        writer.write("Hello World");
+    @Funq
+    public String hello() {
+        return "Hello World";
     }
 }
