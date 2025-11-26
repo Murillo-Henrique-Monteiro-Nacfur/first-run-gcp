@@ -1,22 +1,6 @@
 package com.postech.fiap.googlecloudfunctions;
 
-import io.quarkus.google.cloud.functions.test.FunctionType;
-import io.quarkus.google.cloud.functions.test.WithFunction;
-import io.quarkus.test.junit.QuarkusTest;
-import org.junit.jupiter.api.Test;
-
-import static io.restassured.RestAssured.given;
-
-@QuarkusTest
-@WithFunction(FunctionType.BACKGROUND)
+// This test is no longer relevant after migrating to Funqy for Cloud Run.
+// The file is kept to avoid compilation issues if not deleted from the user's local workspace.
 class HelloWorldBackgroundFunctionTest {
-    @Test
-    void testAccept() {
-        given()
-                .body("{\"data\":{\"name\":\"hello.txt\"}}")
-                .when()
-                .post()
-                .then()
-                .statusCode(200);
-    }
 }
