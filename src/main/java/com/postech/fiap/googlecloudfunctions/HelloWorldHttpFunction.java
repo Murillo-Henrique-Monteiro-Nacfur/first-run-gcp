@@ -8,6 +8,6 @@ public class HelloWorldHttpFunction {
 
     @Funq
     public String hello() {
-        return "Hello World";
+        return "Hello World Tiko";
     }
 }
